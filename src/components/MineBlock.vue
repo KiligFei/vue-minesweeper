@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import type { BlockState } from '~/types'
 import { isDev } from '~/composables'
+import type { BlockState } from '~/types'
 defineProps<{ block: BlockState }>()
 const numberColors = [
   'text-transparent',
@@ -25,7 +25,7 @@ function getBlockClass(block: BlockState) {
 </script>
 
 <template>
-  <button flex="~" items-center justify-center w-10 h-10 m="0.5" border="1 gray-400/10" :class="getBlockClass(block)">
+  <button flex="~" items-center justify-center w-8 h-8 m="1px" border="0.5 gray-400/5" :class="getBlockClass(block)">
     <template v-if="block.flagged">
       <div i-mdi-flag text-red />
     </template>
