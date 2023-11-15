@@ -32,7 +32,7 @@ jobs:
           key: ${{ secrets.KILIG }}
           port: 22
           source: 'dist/*'
-          target: '/var/www/web/vue-minesweeper'
+          target: '/var/www/html'
 
       # - name: Restart PM2 process
       #   uses: appleboy/ssh-action@master
