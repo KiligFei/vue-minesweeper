@@ -33,14 +33,3 @@ jobs:
           port: 22
           source: 'dist/*'
           target: '~/web'
-
-      - name: Restart server
-        uses: appleboy/ssh-action@master
-        with:
-          host: 111.229.120.98
-          username: ubuntu
-          key: ${{ secrets.KILIG }}
-          port: 22
-          script: |
-            cd ~/web
-            pm2 restart all
