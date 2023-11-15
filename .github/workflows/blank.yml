@@ -39,7 +39,7 @@ jobs:
         with:
           host: 111.229.120.98
           username: root
-          key: ${{ secrets.SERVER_KEY }}
+          key: ${{ secrets.KILIG }}
           port: 22
           script: |
             cd ~/web/vue-minesweeper
