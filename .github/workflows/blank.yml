@@ -34,7 +34,7 @@ jobs:
           source: 'dist/*'
           target: '~/web'
 
-      - name: Restart server
+      - name: Restart PM2 process
         uses: appleboy/ssh-action@master
         with:
           host: 111.229.120.98
@@ -42,5 +42,5 @@ jobs:
           key: ${{ secrets.KILIG }}
           port: 22
           script: |
-            cd ~/web/dist
+            cd ~/web
             pm2 restart all
