@@ -42,5 +42,5 @@ jobs:
           key: ${{ secrets.KILIG }}
           port: 22
           script: |
-            cd ~/web/vue-minesweeper
+            cd ~/web
             pnpm run restart
