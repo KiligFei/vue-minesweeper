@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build:
+  build and deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -42,5 +42,5 @@ jobs:
           key: ${{ secrets.KILIG }}
           port: 22
           script: |
-            cd ~/web
+            cd ~/web/dist
             pm2 restart all
